@@ -1,27 +1,8 @@
-g# Multimodal RAG Video QA System
+# Multimodal RAG Video QA System
 
-This project aims to build a simple demo of a multimodal RAG-based video question-answering system. Users can provide a YouTube video URL, and the system will process its transcript to allow for Q&A, along with generating a section breakdown of the video with hyperlinked timestamps.
+This project builds a simple demo of a multimodal RAG-based video question-answering system. Users can provide a YouTube video URL, and the system will process its transcript to allow for Q&A, along with generating a section breakdown of the video with hyperlinked timestamps.
 
-## 🏗️ Project Structure
-
-```
-.
-├── api/                    # Python FastAPI backend
-│   ├── main.py             # FastAPI application
-│   ├── pyproject.toml      # Python dependencies (for uv/pip)
-│   ├── .env.example        # Example environment variables (user creates .env)
-│   └── README.md           # Backend setup and details
-├── web/                    # Next.js frontend application
-│   ├── app/                # Next.js app directory (pages, components)
-│   ├── public/             # Static assets
-│   ├── package.json        # Frontend dependencies (Bun)
-│   └── README.md           # Frontend setup (if specific beyond root)
-├── tasks.md                # Project tasks and roadmap
-├── package.json            # Root workspace configuration (Bun)
-└── README.md               # This file
-```
-
-## 🚀 Core Features (Planned)
+## 🚀 Core Features
 
 -   **Video Input**: User provides a YouTube video URL.
 -   **Transcript Processing**: Extracts transcript, (future) stores in PostgreSQL with `pgvector`.
@@ -98,7 +79,6 @@ This will typically start the Next.js development server on `http://localhost:30
 
 ## 📖 Key Documentation
 
--   **Project Tasks**: `tasks.md`
 -   **Backend API Setup**: `api/README.md`
 -   **Frontend UI**: `web/README.md` (if needed for specifics)
 
