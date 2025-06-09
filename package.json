@@ -1,0 +1,23 @@
+{
+  "name": "multimodal-video-qa-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A RAG-based system for asking questions about YouTube videos using their transcripts.",
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "web:dev": "bun run --cwd web dev",
+    "web:build": "bun run --cwd web build",
+    "web:start": "bun run --cwd web start",
+    "web:lint": "bun run --cwd web lint",
+    "api:dev": "cd api && uvicorn main:app --reload --port 8000",
+    "dev": "echo \"Remember to activate your Python virtual environment for the API separately!\" && concurrently \"bun run web:dev\" \"bun run api:dev\"",
+    "lint": "bun run web:lint"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "concurrently": "^9.1.2",
+    "typescript": "^5"
+  }
+}
